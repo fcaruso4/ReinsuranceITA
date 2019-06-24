@@ -23,6 +23,7 @@ public class Main {
 	
 	 public static void main(String[] args){
 	
+		 
 		runInternal("resources/pippo.kjb");
 //		runInternal("resources/parameterized_job.kjb");
 		
