@@ -3,6 +3,7 @@
   <groupId>ProvaKettle</groupId>
   <artifactId>ProvaKettle</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -12,7 +13,7 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
-        </configuration>
+        </configuration> 
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
