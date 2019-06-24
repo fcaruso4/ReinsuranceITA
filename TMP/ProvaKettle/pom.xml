@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ProvaKettle</groupId>
+  <artifactId>ProvaKettle</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <packaging>war</packaging>
+  
+  
+  <properties>
+    <pentaho.kettle.version>8.3.0.0-279</pentaho.kettle.version>    
+  </properties>
+  <repositories>
+	  <repository>
+		  <id>pentaho-kettle</id>		  
+		  <url>http://nexus.pentaho.org/content/groups/omni</url>
+	  </repository>
+  </repositories>
+  <dependencies>
+
+	<dependency>
+	  <groupId>pentaho-kettle</groupId>
+	  <artifactId>kettle-core</artifactId>
+	  <version>${pentaho.kettle.version}</version>
+	</dependency>
+   
+   <dependency>
+	  <groupId>pentaho-kettle</groupId>
+	  <artifactId>kettle-db</artifactId>
+	  <version>4.4.3.4</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>pentaho-kettle</groupId>
+	  <artifactId>kettle-engine</artifactId>
+	  <version>${pentaho.kettle.version}</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>pentaho-kettle</groupId>
+	  <artifactId>kettle-ui-swt</artifactId>
+	  <version>${pentaho.kettle.version}</version>
+	</dependency>
+	
+	<dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.26</version>
+   </dependency>
+   <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-simple</artifactId>
+       <version>1.7.26</version>
+   </dependency>
+   
+	
+  </dependencies>
+  
+</project>
